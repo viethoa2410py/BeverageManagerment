@@ -1,0 +1,330 @@
+﻿<Window x:Class="QuanLyThuVien.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuanLyThuVien"
+        mc:Ignorable="d"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        
+        xmlns:uc="clr-namespace:QuanLyThuVien.UserControlCustom"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Name="mainWindow"
+        DataContext="{StaticResource MainVM}"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        
+        Title="MainWindow" Height="500" Width="800">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadWindowCommand}" CommandParameter="{Binding ElementName=mainWindow}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <uc:ControlBarUC></uc:ControlBarUC>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.ColumnSpan="2" Margin="0,0,0,0.4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <materialDesign:Card       
+                        materialDesign:ShadowAssist.ShadowDepth="Depth5" Width="200" Height="350" VerticalAlignment="Center" Background="Gray">
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition
+        Height="140" />
+                                <RowDefinition
+        Height="*" />
+                                <RowDefinition
+        Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Image
+      Source=".\ResourceImage\ban-hang.jpg"
+      Height="140"
+      Width="196"
+      Stretch="UniformToFill" />
+                            <Button
+                                Command="{Binding ProductCommand}"
+                                Grid.Row="0"
+                                Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Bottom"
+                                Margin="0 0 16 -20">
+                                <materialDesign:PackIcon
+        Kind="PageNextOutline" Height="30" Width="30" />
+                            </Button>
+                            <StackPanel
+      Grid.Row="1"
+      Margin="8 24 8 0">
+                                <TextBlock        
+                                    FontWeight="Bold">     
+                                    Bán Hàng
+                                </TextBlock>
+                                <TextBlock
+        TextWrapping="Wrap"
+        VerticalAlignment="Center"
+        Text="Chọn loại nước cần bán cho khách hàng, nhập số lượng, địa chỉ khách hàng và in bill.
+                                    Choose the drinks that you want to sell, import the unit, address and print the bill." />
+                            </StackPanel>
+                            <StackPanel
+      HorizontalAlignment="Right"
+      Grid.Row="2"
+      Orientation="Horizontal"
+      Margin="8">
+                                <Button
+                                    Command="{Binding PassbookCommand}"
+                                    Style="{StaticResource MaterialDesignToolButton}"
+        Width="30"
+        Padding="2 0 2 0"
+        materialDesign:RippleAssist.IsCentered="True">
+                                    <materialDesign:PackIcon
+          Kind="ShareVariant" />
+                                </Button>
+                                <Button
+        Style="{StaticResource MaterialDesignToolButton}"
+        Width="30"
+        Padding="2 0 2 0"
+        materialDesign:RippleAssist.IsCentered="True">
+                                    <materialDesign:PackIcon
+          Kind="Heart" />
+                                </Button>
+
+                            </StackPanel>
+                        </Grid>
+                    </materialDesign:Card>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <materialDesign:Card       
+                        materialDesign:ShadowAssist.ShadowDepth="Depth5" Width="200" Height="350" VerticalAlignment="Center" Background="DarkGoldenrod">
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition
+        Height="140" />
+                                <RowDefinition
+        Height="*" />
+                                <RowDefinition
+        Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Image
+      Source=".\ResourceImage\nhap-kho.jpg"
+      Height="140"
+      Width="196"
+      Stretch="UniformToFill" />
+                            <Button
+                                Command="{Binding StorageCommand}"
+                                Grid.Row="0"
+                                Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Bottom"
+                                Margin="0 0 16 -20">
+                                <materialDesign:PackIcon
+        Kind="PageNextOutline" Height="30" Width="30" />
+                            </Button>
+                            <StackPanel
+      Grid.Row="1"
+      Margin="8 24 8 0">
+                                <TextBlock        
+                                    FontWeight="Bold">     
+                                    Nhập Kho
+                                </TextBlock>
+                                <TextBlock
+        TextWrapping="Wrap"
+        VerticalAlignment="Center"
+        Text="Nhập hàng mới vào kho. Yêu cầu nhập loại hàng, số lượng, nhà cung cấp, ngày cấp hàng và hóa đơn
+                                      To load new goods you need to import the type of goods, unit, suplier, date and bill." />
+                            </StackPanel>
+                            <StackPanel
+      HorizontalAlignment="Right"
+      Grid.Row="2"
+      Orientation="Horizontal"
+      Margin="8">
+                                <Button
+                                    Command="{Binding PaymentCommand}"
+                                    Style="{StaticResource MaterialDesignToolButton}"
+                                    Width="30"
+                                    Padding="2 0 2 0"
+                                    materialDesign:RippleAssist.IsCentered="True">
+                                    <materialDesign:PackIcon
+          Kind="ShareVariant" />
+                                </Button>
+                                <Button
+        Style="{StaticResource MaterialDesignToolButton}"
+        Width="30"
+        Padding="2 0 2 0"
+        materialDesign:RippleAssist.IsCentered="True">
+                                    <materialDesign:PackIcon
+          Kind="Heart" />
+                                </Button>
+
+                            </StackPanel>
+                        </Grid>
+                    </materialDesign:Card>
+                </Grid>
+                <Grid Grid.Column="2">
+                    <materialDesign:Card       
+                        materialDesign:ShadowAssist.ShadowDepth="Depth5" Width="200" Height="350" VerticalAlignment="Center" Background="DarkGreen">
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition
+        Height="140" />
+                                <RowDefinition
+        Height="*" />
+                                <RowDefinition
+        Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Image
+      Source=".\ResourceImage\cham-soc-khach-hang.jpg"
+      Height="140"
+      Width="196"
+      Stretch="UniformToFill" />
+                            <Button
+                                Command="{Binding ReceiptsCommand}"
+                                Grid.Row="0"
+                                Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Bottom"
+                                Margin="0 0 16 -20">
+                                <materialDesign:PackIcon
+        Kind="PageNextOutline" Height="30" Width="30" />
+                            </Button>
+                            <StackPanel
+      Grid.Row="1"
+      Margin="8 24 8 0">
+                                <TextBlock        
+                                    FontWeight="Bold">     
+                                    Chăm Sóc Khách Hàng
+                                </TextBlock>
+                                <TextBlock
+        TextWrapping="Wrap"
+        VerticalAlignment="Center"
+        Text="Lập danh sách subcriber, thông tin liên lạc của khách hàng, các dịch vụ khác.
+                                    Subcriber list, infomation and other service." />
+                            </StackPanel>
+                            <StackPanel
+      HorizontalAlignment="Right"
+      Grid.Row="2"
+      Orientation="Horizontal"
+      Margin="8">
+                                <Button
+                                    Command="{Binding ReceiptsCommand}"
+                                    Style="{StaticResource MaterialDesignToolButton}"
+                                    Width="30"
+                                    Padding="2 0 2 0"
+                                    materialDesign:RippleAssist.IsCentered="True">
+                                    <materialDesign:PackIcon
+                                        Kind="ShareVariant" />
+                                </Button>
+                                <Button
+        Style="{StaticResource MaterialDesignToolButton}"
+        Width="30"
+        Padding="2 0 2 0"
+        materialDesign:RippleAssist.IsCentered="True">
+                                    <materialDesign:PackIcon
+          Kind="Heart" />
+                                </Button>
+
+                            </StackPanel>
+                        </Grid>
+                    </materialDesign:Card>
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="0" Margin="0,0,10,0.4" Grid.ColumnSpan="2" >
+                <materialDesign:DrawerHost
+        x:Name="DrawerHost"
+        VerticalAlignment="Top"
+        BorderBrush="{DynamicResource MaterialDesignDivider}" Height="458">
+                    <materialDesign:DrawerHost.Style>
+                        <Style
+      TargetType="materialDesign:DrawerHost"
+      BasedOn="{StaticResource {x:Type materialDesign:DrawerHost}}">
+                            <Style.Triggers>
+                                <DataTrigger
+          Binding="{Binding IsChecked, ElementName=BackgroundToggle}"
+          Value="True">
+                                    <Setter
+            Property="OverlayBackground"
+            Value="{DynamicResource PrimaryHueMidBrush}" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </materialDesign:DrawerHost.Style>
+                    <materialDesign:DrawerHost.LeftDrawerContent>
+                        <StackPanel
+      
+                            Margin="16">
+                            <TextBlock        
+                                Margin="4"        
+                                HorizontalAlignment="Center"        
+                                Text="TÁC VỤ" />
+                            <Button                                                                
+                                Command="{Binding PassbookListViewCommand}"
+                                Margin="4"                                    
+                                HorizontalAlignment="Center"                                    
+                                Style="{DynamicResource MaterialDesignFlatButton}"                                    
+                                Content="Danh Sách Sổ" />
+                            <Button        
+                                Command="{Binding StatisticalCommand}"        
+                                Margin="4"        
+                                HorizontalAlignment="Center"        
+                                Style="{DynamicResource MaterialDesignFlatButton}"        
+                                Content="Thống Kê Ngày" />
+                            <Button        
+                                Command="{Binding MonthStatisticalCommand}"        
+                                Margin="4"        
+                                HorizontalAlignment="Center"        
+                                Style="{DynamicResource MaterialDesignFlatButton}"        
+                                Content="Thống Kê Tháng" />
+                        </StackPanel>
+                    </materialDesign:DrawerHost.LeftDrawerContent>
+
+                    <Grid      
+                    VerticalAlignment="Top"      
+                    HorizontalAlignment="Left">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Button                             
+                            materialDesign:ShadowAssist.ShadowDepth="Depth5"                        
+                            Command="{x:Static materialDesign:DrawerHost.OpenDrawerCommand}"                                
+                            CommandParameter="{x:Static Dock.Left}"                                
+                            Grid.Row="1"                                
+                            Grid.Column="0"                                                        
+                            Content="{materialDesign:PackIcon Kind=MicrosoftXboxControllerMenu, Size=25}" />
+                    </Grid>
+
+                </materialDesign:DrawerHost>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

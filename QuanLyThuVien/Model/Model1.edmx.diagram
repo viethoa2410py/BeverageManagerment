@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e1d9180d25ea473e9d4f31d92faaeaa2" Name="Diagram1">
+        <EntityTypeShape EntityType="BEVERAGEMANAGERMENTModel.CUSTOMER" Width="1.5" PointX="3" PointY="0.75" />
+        <EntityTypeShape EntityType="BEVERAGEMANAGERMENTModel.Input" Width="1.5" PointX="6" PointY="1.25" />
+        <EntityTypeShape EntityType="BEVERAGEMANAGERMENTModel.InputInfo" Width="1.5" PointX="8.25" PointY="4.5" />
+        <EntityTypeShape EntityType="BEVERAGEMANAGERMENTModel.OBJECT" Width="1.5" PointX="3" PointY="4.125" />
+        <EntityTypeShape EntityType="BEVERAGEMANAGERMENTModel.Output" Width="1.5" PointX="3" PointY="9" />
+        <EntityTypeShape EntityType="BEVERAGEMANAGERMENTModel.OutputInto" Width="1.5" PointX="5.25" PointY="4.875" />
+        <EntityTypeShape EntityType="BEVERAGEMANAGERMENTModel.SUPLIER" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="BEVERAGEMANAGERMENTModel.sysdiagram" Width="1.5" PointX="10.75" PointY="2.25" />
+        <EntityTypeShape EntityType="BEVERAGEMANAGERMENTModel.UNIT" Width="1.5" PointX="0.75" PointY="1.25" />
+        <EntityTypeShape EntityType="BEVERAGEMANAGERMENTModel.USERINFO" Width="1.5" PointX="8" PointY="9.5" />
+        <EntityTypeShape EntityType="BEVERAGEMANAGERMENTModel.USERROLE" Width="1.5" PointX="5.75" PointY="9.625" />
+        <AssociationConnector Association="BEVERAGEMANAGERMENTModel.FK__OutputInt__IdCus__6A30C649" />
+        <AssociationConnector Association="BEVERAGEMANAGERMENTModel.FK__InputInfo__IdInp__35BCFE0A" />
+        <AssociationConnector Association="BEVERAGEMANAGERMENTModel.FK__InputInfo__IdInp__5070F446" />
+        <AssociationConnector Association="BEVERAGEMANAGERMENTModel.FK__InputInfo__IdInp__66603565" />
+        <AssociationConnector Association="BEVERAGEMANAGERMENTModel.FK__InputInfo__IdObj__36B12243" />
+        <AssociationConnector Association="BEVERAGEMANAGERMENTModel.FK__InputInfo__IdObj__5165187F" />
+        <AssociationConnector Association="BEVERAGEMANAGERMENTModel.FK__InputInfo__IdObj__6754599E" />
+        <AssociationConnector Association="BEVERAGEMANAGERMENTModel.FK__OBJECTS__IdSupli__38996AB5" />
+        <AssociationConnector Association="BEVERAGEMANAGERMENTModel.FK__OBJECTS__IdSupli__534D60F1" />
+        <AssociationConnector Association="BEVERAGEMANAGERMENTModel.FK__OBJECTS__IdSupli__693CA210" />
+        <AssociationConnector Association="BEVERAGEMANAGERMENTModel.FK__OBJECTS__IdUnit__37A5467C" />
+        <AssociationConnector Association="BEVERAGEMANAGERMENTModel.FK__OBJECTS__IdUnit__52593CB8" />
+        <AssociationConnector Association="BEVERAGEMANAGERMENTModel.FK__OBJECTS__IdUnit__68487DD7" />
+        <AssociationConnector Association="BEVERAGEMANAGERMENTModel.FK__OutputInt__IdObj__6B24EA82" />
+        <AssociationConnector Association="BEVERAGEMANAGERMENTModel.FK__OutputInto__Id__619B8048" />
+        <AssociationConnector Association="BEVERAGEMANAGERMENTModel.FK__USERINFO__IdRole__398D8EEE" />
+        <AssociationConnector Association="BEVERAGEMANAGERMENTModel.FK__USERINFO__IdRole__5441852A" />
+        <AssociationConnector Association="BEVERAGEMANAGERMENTModel.FK__USERINFO__IdRole__6C190EBB" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BEVERAGEMANAGERMENTModelStoreContainer" CdmEntityContainer="BEVERAGEMANAGERMENTEntities">
+    <EntitySetMapping Name="CUSTOMERs">
+      <EntityTypeMapping TypeName="BEVERAGEMANAGERMENTModel.CUSTOMER">
+        <MappingFragment StoreEntitySet="CUSTOMER">
+          <ScalarProperty Name="Contractdate" ColumnName="Contractdate" />
+          <ScalarProperty Name="MoreInfo" ColumnName="MoreInfo" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inputs">
+      <EntityTypeMapping TypeName="BEVERAGEMANAGERMENTModel.Input">
+        <MappingFragment StoreEntitySet="Input">
+          <ScalarProperty Name="DateInput" ColumnName="DateInput" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InputInfoes">
+      <EntityTypeMapping TypeName="BEVERAGEMANAGERMENTModel.InputInfo">
+        <MappingFragment StoreEntitySet="InputInfo">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="OutputPrice" ColumnName="OutputPrice" />
+          <ScalarProperty Name="InputPrice" ColumnName="InputPrice" />
+          <ScalarProperty Name="Counts" ColumnName="Counts" />
+          <ScalarProperty Name="IdInput" ColumnName="IdInput" />
+          <ScalarProperty Name="IdObject" ColumnName="IdObject" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OBJECTS">
+      <EntityTypeMapping TypeName="BEVERAGEMANAGERMENTModel.OBJECT">
+        <MappingFragment StoreEntitySet="OBJECTS">
+          <ScalarProperty Name="BarCode" ColumnName="BarCode" />
+          <ScalarProperty Name="QRCode" ColumnName="QRCode" />
+          <ScalarProperty Name="IdSuplier" ColumnName="IdSuplier" />
+          <ScalarProperty Name="IdUnit" ColumnName="IdUnit" />
+          <ScalarProperty Name="Displayname" ColumnName="Displayname" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Outputs">
+      <EntityTypeMapping TypeName="BEVERAGEMANAGERMENTModel.Output">
+        <MappingFragment StoreEntitySet="Output">
+          <ScalarProperty Name="DateOutput" ColumnName="DateOutput" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OutputIntoes">
+      <EntityTypeMapping TypeName="BEVERAGEMANAGERMENTModel.OutputInto">
+        <MappingFragment StoreEntitySet="OutputInto">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Counts" ColumnName="Counts" />
+          <ScalarProperty Name="IdCustomer" ColumnName="IdCustomer" />
+          <ScalarProperty Name="IdOutputInfo" ColumnName="IdOutputInfo" />
+          <ScalarProperty Name="IdObject" ColumnName="IdObject" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SUPLIERs">
+      <EntityTypeMapping TypeName="BEVERAGEMANAGERMENTModel.SUPLIER">
+        <MappingFragment StoreEntitySet="SUPLIER">
+          <ScalarProperty Name="Contractdate" ColumnName="Contractdate" />
+          <ScalarProperty Name="MoreInfo" ColumnName="MoreInfo" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="BEVERAGEMANAGERMENTModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UNITs">
+      <EntityTypeMapping TypeName="BEVERAGEMANAGERMENTModel.UNIT">
+        <MappingFragment StoreEntitySet="UNIT">
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USERINFOes">
+      <EntityTypeMapping TypeName="BEVERAGEMANAGERMENTModel.USERINFO">
+        <MappingFragment StoreEntitySet="USERINFO">
+          <ScalarProperty Name="Userpassword" ColumnName="Userpassword" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="IdRole" ColumnName="IdRole" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USERROLEs">
+      <EntityTypeMapping TypeName="BEVERAGEMANAGERMENTModel.USERROLE">
+        <MappingFragment StoreEntitySet="USERROLE">
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BEVERAGEMANAGERMENTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="BEVERAGEMANAGERMENTEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CUSTOMERs" EntityType="BEVERAGEMANAGERMENTModel.CUSTOMER" />
+    <EntitySet Name="Inputs" EntityType="BEVERAGEMANAGERMENTModel.Input" />
+    <EntitySet Name="InputInfoes" EntityType="BEVERAGEMANAGERMENTModel.InputInfo" />
+    <EntitySet Name="OBJECTS" EntityType="BEVERAGEMANAGERMENTModel.OBJECT" />
+    <EntitySet Name="Outputs" EntityType="BEVERAGEMANAGERMENTModel.Output" />
+    <EntitySet Name="OutputIntoes" EntityType="BEVERAGEMANAGERMENTModel.OutputInto" />
+    <EntitySet Name="SUPLIERs" EntityType="BEVERAGEMANAGERMENTModel.SUPLIER" />
+    <EntitySet Name="sysdiagrams" EntityType="BEVERAGEMANAGERMENTModel.sysdiagram" />
+    <EntitySet Name="UNITs" EntityType="BEVERAGEMANAGERMENTModel.UNIT" />
+    <EntitySet Name="USERINFOes" EntityType="BEVERAGEMANAGERMENTModel.USERINFO" />
+    <EntitySet Name="USERROLEs" EntityType="BEVERAGEMANAGERMENTModel.USERROLE" />
+    <AssociationSet Name="FK__OutputInt__IdCus__6A30C649" Association="BEVERAGEMANAGERMENTModel.FK__OutputInt__IdCus__6A30C649">
+      <End Role="CUSTOMER" EntitySet="CUSTOMERs" />
+      <End Role="OutputInto" EntitySet="OutputIntoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__InputInfo__IdInp__35BCFE0A" Association="BEVERAGEMANAGERMENTModel.FK__InputInfo__IdInp__35BCFE0A">
+      <End Role="Input" EntitySet="Inputs" />
+      <End Role="InputInfo" EntitySet="InputInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__InputInfo__IdInp__5070F446" Association="BEVERAGEMANAGERMENTModel.FK__InputInfo__IdInp__5070F446">
+      <End Role="Input" EntitySet="Inputs" />
+      <End Role="InputInfo" EntitySet="InputInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__InputInfo__IdInp__66603565" Association="BEVERAGEMANAGERMENTModel.FK__InputInfo__IdInp__66603565">
+      <End Role="Input" EntitySet="Inputs" />
+      <End Role="InputInfo" EntitySet="InputInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__InputInfo__IdObj__36B12243" Association="BEVERAGEMANAGERMENTModel.FK__InputInfo__IdObj__36B12243">
+      <End Role="OBJECT" EntitySet="OBJECTS" />
+      <End Role="InputInfo" EntitySet="InputInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__InputInfo__IdObj__5165187F" Association="BEVERAGEMANAGERMENTModel.FK__InputInfo__IdObj__5165187F">
+      <End Role="OBJECT" EntitySet="OBJECTS" />
+      <End Role="InputInfo" EntitySet="InputInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__InputInfo__IdObj__6754599E" Association="BEVERAGEMANAGERMENTModel.FK__InputInfo__IdObj__6754599E">
+      <End Role="OBJECT" EntitySet="OBJECTS" />
+      <End Role="InputInfo" EntitySet="InputInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OBJECTS__IdSupli__38996AB5" Association="BEVERAGEMANAGERMENTModel.FK__OBJECTS__IdSupli__38996AB5">
+      <End Role="SUPLIER" EntitySet="SUPLIERs" />
+      <End Role="OBJECT" EntitySet="OBJECTS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OBJECTS__IdSupli__534D60F1" Association="BEVERAGEMANAGERMENTModel.FK__OBJECTS__IdSupli__534D60F1">
+      <End Role="SUPLIER" EntitySet="SUPLIERs" />
+      <End Role="OBJECT" EntitySet="OBJECTS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OBJECTS__IdSupli__693CA210" Association="BEVERAGEMANAGERMENTModel.FK__OBJECTS__IdSupli__693CA210">
+      <End Role="SUPLIER" EntitySet="SUPLIERs" />
+      <End Role="OBJECT" EntitySet="OBJECTS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OBJECTS__IdUnit__37A5467C" Association="BEVERAGEMANAGERMENTModel.FK__OBJECTS__IdUnit__37A5467C">
+      <End Role="UNIT" EntitySet="UNITs" />
+      <End Role="OBJECT" EntitySet="OBJECTS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OBJECTS__IdUnit__52593CB8" Association="BEVERAGEMANAGERMENTModel.FK__OBJECTS__IdUnit__52593CB8">
+      <End Role="UNIT" EntitySet="UNITs" />
+      <End Role="OBJECT" EntitySet="OBJECTS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OBJECTS__IdUnit__68487DD7" Association="BEVERAGEMANAGERMENTModel.FK__OBJECTS__IdUnit__68487DD7">
+      <End Role="UNIT" EntitySet="UNITs" />
+      <End Role="OBJECT" EntitySet="OBJECTS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OutputInt__IdObj__6B24EA82" Association="BEVERAGEMANAGERMENTModel.FK__OutputInt__IdObj__6B24EA82">
+      <End Role="OBJECT" EntitySet="OBJECTS" />
+      <End Role="OutputInto" EntitySet="OutputIntoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OutputInto__Id__619B8048" Association="BEVERAGEMANAGERMENTModel.FK__OutputInto__Id__619B8048">
+      <End Role="Output" EntitySet="Outputs" />
+      <End Role="OutputInto" EntitySet="OutputIntoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__USERINFO__IdRole__398D8EEE" Association="BEVERAGEMANAGERMENTModel.FK__USERINFO__IdRole__398D8EEE">
+      <End Role="USERROLE" EntitySet="USERROLEs" />
+      <End Role="USERINFO" EntitySet="USERINFOes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__USERINFO__IdRole__5441852A" Association="BEVERAGEMANAGERMENTModel.FK__USERINFO__IdRole__5441852A">
+      <End Role="USERROLE" EntitySet="USERROLEs" />
+      <End Role="USERINFO" EntitySet="USERINFOes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__USERINFO__IdRole__6C190EBB" Association="BEVERAGEMANAGERMENTModel.FK__USERINFO__IdRole__6C190EBB">
+      <End Role="USERROLE" EntitySet="USERROLEs" />
+      <End Role="USERINFO" EntitySet="USERINFOes" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CUSTOMER">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DisplayName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="MoreInfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Contractdate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="OutputIntoes" Relationship="BEVERAGEMANAGERMENTModel.FK__OutputInt__IdCus__6A30C649" FromRole="CUSTOMER" ToRole="OutputInto" />
+  </EntityType>
+  <EntityType Name="Input">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="DateInput" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="InputInfoes" Relationship="BEVERAGEMANAGERMENTModel.FK__InputInfo__IdInp__35BCFE0A" FromRole="Input" ToRole="InputInfo" />
+    <NavigationProperty Name="InputInfoes1" Relationship="BEVERAGEMANAGERMENTModel.FK__InputInfo__IdInp__5070F446" FromRole="Input" ToRole="InputInfo" />
+    <NavigationProperty Name="InputInfoes2" Relationship="BEVERAGEMANAGERMENTModel.FK__InputInfo__IdInp__66603565" FromRole="Input" ToRole="InputInfo" />
+  </EntityType>
+  <EntityType Name="InputInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="IdObject" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="IdInput" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Counts" Type="Int32" />
+    <Property Name="InputPrice" Type="Double" />
+    <Property Name="OutputPrice" Type="Double" />
+    <Property Name="Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Input" Relationship="BEVERAGEMANAGERMENTModel.FK__InputInfo__IdInp__35BCFE0A" FromRole="InputInfo" ToRole="Input" />
+    <NavigationProperty Name="Input1" Relationship="BEVERAGEMANAGERMENTModel.FK__InputInfo__IdInp__5070F446" FromRole="InputInfo" ToRole="Input" />
+    <NavigationProperty Name="Input2" Relationship="BEVERAGEMANAGERMENTModel.FK__InputInfo__IdInp__66603565" FromRole="InputInfo" ToRole="Input" />
+    <NavigationProperty Name="OBJECT" Relationship="BEVERAGEMANAGERMENTModel.FK__InputInfo__IdObj__36B12243" FromRole="InputInfo" ToRole="OBJECT" />
+    <NavigationProperty Name="OBJECT1" Relationship="BEVERAGEMANAGERMENTModel.FK__InputInfo__IdObj__5165187F" FromRole="InputInfo" ToRole="OBJECT" />
+    <NavigationProperty Name="OBJECT2" Relationship="BEVERAGEMANAGERMENTModel.FK__InputInfo__IdObj__6754599E" FromRole="InputInfo" ToRole="OBJECT" />
+  </EntityType>
+  <EntityType Name="OBJECT">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Displayname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IdUnit" Type="Int32" Nullable="false" />
+    <Property Name="IdSuplier" Type="Int32" Nullable="false" />
+    <Property Name="QRCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BarCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="InputInfoes" Relationship="BEVERAGEMANAGERMENTModel.FK__InputInfo__IdObj__36B12243" FromRole="OBJECT" ToRole="InputInfo" />
+    <NavigationProperty Name="InputInfoes1" Relationship="BEVERAGEMANAGERMENTModel.FK__InputInfo__IdObj__5165187F" FromRole="OBJECT" ToRole="InputInfo" />
+    <NavigationProperty Name="InputInfoes2" Relationship="BEVERAGEMANAGERMENTModel.FK__InputInfo__IdObj__6754599E" FromRole="OBJECT" ToRole="InputInfo" />
+    <NavigationProperty Name="SUPLIER" Relationship="BEVERAGEMANAGERMENTModel.FK__OBJECTS__IdSupli__38996AB5" FromRole="OBJECT" ToRole="SUPLIER" />
+    <NavigationProperty Name="SUPLIER1" Relationship="BEVERAGEMANAGERMENTModel.FK__OBJECTS__IdSupli__534D60F1" FromRole="OBJECT" ToRole="SUPLIER" />
+    <NavigationProperty Name="SUPLIER2" Relationship="BEVERAGEMANAGERMENTModel.FK__OBJECTS__IdSupli__693CA210" FromRole="OBJECT" ToRole="SUPLIER" />
+    <NavigationProperty Name="UNIT" Relationship="BEVERAGEMANAGERMENTModel.FK__OBJECTS__IdUnit__37A5467C" FromRole="OBJECT" ToRole="UNIT" />
+    <NavigationProperty Name="UNIT1" Relationship="BEVERAGEMANAGERMENTModel.FK__OBJECTS__IdUnit__52593CB8" FromRole="OBJECT" ToRole="UNIT" />
+    <NavigationProperty Name="UNIT2" Relationship="BEVERAGEMANAGERMENTModel.FK__OBJECTS__IdUnit__68487DD7" FromRole="OBJECT" ToRole="UNIT" />
+    <NavigationProperty Name="OutputIntoes" Relationship="BEVERAGEMANAGERMENTModel.FK__OutputInt__IdObj__6B24EA82" FromRole="OBJECT" ToRole="OutputInto" />
+  </EntityType>
+  <EntityType Name="Output">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="DateOutput" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="OutputInto" Relationship="BEVERAGEMANAGERMENTModel.FK__OutputInto__Id__619B8048" FromRole="Output" ToRole="OutputInto" />
+  </EntityType>
+  <EntityType Name="OutputInto">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="IdObject" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="IdOutputInfo" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="IdCustomer" Type="Int32" Nullable="false" />
+    <Property Name="Counts" Type="Int32" />
+    <Property Name="Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CUSTOMER" Relationship="BEVERAGEMANAGERMENTModel.FK__OutputInt__IdCus__6A30C649" FromRole="OutputInto" ToRole="CUSTOMER" />
+    <NavigationProperty Name="OBJECT" Relationship="BEVERAGEMANAGERMENTModel.FK__OutputInt__IdObj__6B24EA82" FromRole="OutputInto" ToRole="OBJECT" />
+    <NavigationProperty Name="Output" Relationship="BEVERAGEMANAGERMENTModel.FK__OutputInto__Id__619B8048" FromRole="OutputInto" ToRole="Output" />
+  </EntityType>
+  <EntityType Name="SUPLIER">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DisplayName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="MoreInfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Contractdate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="OBJECTS" Relationship="BEVERAGEMANAGERMENTModel.FK__OBJECTS__IdSupli__38996AB5" FromRole="SUPLIER" ToRole="OBJECT" />
+    <NavigationProperty Name="OBJECTS1" Relationship="BEVERAGEMANAGERMENTModel.FK__OBJECTS__IdSupli__534D60F1" FromRole="SUPLIER" ToRole="OBJECT" />
+    <NavigationProperty Name="OBJECTS2" Relationship="BEVERAGEMANAGERMENTModel.FK__OBJECTS__IdSupli__693CA210" FromRole="SUPLIER" ToRole="OBJECT" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="UNIT">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DisplayName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="OBJECTS" Relationship="BEVERAGEMANAGERMENTModel.FK__OBJECTS__IdUnit__37A5467C" FromRole="UNIT" ToRole="OBJECT" />
+    <NavigationProperty Name="OBJECTS1" Relationship="BEVERAGEMANAGERMENTModel.FK__OBJECTS__IdUnit__52593CB8" FromRole="UNIT" ToRole="OBJECT" />
+    <NavigationProperty Name="OBJECTS2" Relationship="BEVERAGEMANAGERMENTModel.FK__OBJECTS__IdUnit__68487DD7" FromRole="UNIT" ToRole="OBJECT" />
+  </EntityType>
+  <EntityType Name="USERINFO">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdRole" Type="Int32" Nullable="false" />
+    <Property Name="Username" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Userpassword" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="USERROLE" Relationship="BEVERAGEMANAGERMENTModel.FK__USERINFO__IdRole__398D8EEE" FromRole="USERINFO" ToRole="USERROLE" />
+    <NavigationProperty Name="USERROLE1" Relationship="BEVERAGEMANAGERMENTModel.FK__USERINFO__IdRole__5441852A" FromRole="USERINFO" ToRole="USERROLE" />
+    <NavigationProperty Name="USERROLE2" Relationship="BEVERAGEMANAGERMENTModel.FK__USERINFO__IdRole__6C190EBB" FromRole="USERINFO" ToRole="USERROLE" />
+  </EntityType>
+  <EntityType Name="USERROLE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DisplayName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="USERINFOes" Relationship="BEVERAGEMANAGERMENTModel.FK__USERINFO__IdRole__398D8EEE" FromRole="USERROLE" ToRole="USERINFO" />
+    <NavigationProperty Name="USERINFOes1" Relationship="BEVERAGEMANAGERMENTModel.FK__USERINFO__IdRole__5441852A" FromRole="USERROLE" ToRole="USERINFO" />
+    <NavigationProperty Name="USERINFOes2" Relationship="BEVERAGEMANAGERMENTModel.FK__USERINFO__IdRole__6C190EBB" FromRole="USERROLE" ToRole="USERINFO" />
+  </EntityType>
+  <Association Name="FK__OutputInt__IdCus__6A30C649">
+    <End Type="BEVERAGEMANAGERMENTModel.CUSTOMER" Role="CUSTOMER" Multiplicity="1" />
+    <End Type="BEVERAGEMANAGERMENTModel.OutputInto" Role="OutputInto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CUSTOMER">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OutputInto">
+        <PropertyRef Name="IdCustomer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__InputInfo__IdInp__35BCFE0A">
+    <End Type="BEVERAGEMANAGERMENTModel.Input" Role="Input" Multiplicity="1" />
+    <End Type="BEVERAGEMANAGERMENTModel.InputInfo" Role="InputInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Input">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="InputInfo">
+        <PropertyRef Name="IdInput" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__InputInfo__IdInp__5070F446">
+    <End Type="BEVERAGEMANAGERMENTModel.Input" Role="Input" Multiplicity="1" />
+    <End Type="BEVERAGEMANAGERMENTModel.InputInfo" Role="InputInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Input">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="InputInfo">
+        <PropertyRef Name="IdInput" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__InputInfo__IdInp__66603565">
+    <End Type="BEVERAGEMANAGERMENTModel.Input" Role="Input" Multiplicity="1" />
+    <End Type="BEVERAGEMANAGERMENTModel.InputInfo" Role="InputInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Input">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="InputInfo">
+        <PropertyRef Name="IdInput" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__InputInfo__IdObj__36B12243">
+    <End Type="BEVERAGEMANAGERMENTModel.OBJECT" Role="OBJECT" Multiplicity="1" />
+    <End Type="BEVERAGEMANAGERMENTModel.InputInfo" Role="InputInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OBJECT">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="InputInfo">
+        <PropertyRef Name="IdObject" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__InputInfo__IdObj__5165187F">
+    <End Type="BEVERAGEMANAGERMENTModel.OBJECT" Role="OBJECT" Multiplicity="1" />
+    <End Type="BEVERAGEMANAGERMENTModel.InputInfo" Role="InputInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OBJECT">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="InputInfo">
+        <PropertyRef Name="IdObject" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__InputInfo__IdObj__6754599E">
+    <End Type="BEVERAGEMANAGERMENTModel.OBJECT" Role="OBJECT" Multiplicity="1" />
+    <End Type="BEVERAGEMANAGERMENTModel.InputInfo" Role="InputInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OBJECT">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="InputInfo">
+        <PropertyRef Name="IdObject" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OBJECTS__IdSupli__38996AB5">
+    <End Type="BEVERAGEMANAGERMENTModel.SUPLIER" Role="SUPLIER" Multiplicity="1" />
+    <End Type="BEVERAGEMANAGERMENTModel.OBJECT" Role="OBJECT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUPLIER">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OBJECT">
+        <PropertyRef Name="IdSuplier" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OBJECTS__IdSupli__534D60F1">
+    <End Type="BEVERAGEMANAGERMENTModel.SUPLIER" Role="SUPLIER" Multiplicity="1" />
+    <End Type="BEVERAGEMANAGERMENTModel.OBJECT" Role="OBJECT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUPLIER">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OBJECT">
+        <PropertyRef Name="IdSuplier" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OBJECTS__IdSupli__693CA210">
+    <End Type="BEVERAGEMANAGERMENTModel.SUPLIER" Role="SUPLIER" Multiplicity="1" />
+    <End Type="BEVERAGEMANAGERMENTModel.OBJECT" Role="OBJECT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUPLIER">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OBJECT">
+        <PropertyRef Name="IdSuplier" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OBJECTS__IdUnit__37A5467C">
+    <End Type="BEVERAGEMANAGERMENTModel.UNIT" Role="UNIT" Multiplicity="1" />
+    <End Type="BEVERAGEMANAGERMENTModel.OBJECT" Role="OBJECT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UNIT">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OBJECT">
+        <PropertyRef Name="IdUnit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OBJECTS__IdUnit__52593CB8">
+    <End Type="BEVERAGEMANAGERMENTModel.UNIT" Role="UNIT" Multiplicity="1" />
+    <End Type="BEVERAGEMANAGERMENTModel.OBJECT" Role="OBJECT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UNIT">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OBJECT">
+        <PropertyRef Name="IdUnit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OBJECTS__IdUnit__68487DD7">
+    <End Type="BEVERAGEMANAGERMENTModel.UNIT" Role="UNIT" Multiplicity="1" />
+    <End Type="BEVERAGEMANAGERMENTModel.OBJECT" Role="OBJECT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UNIT">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OBJECT">
+        <PropertyRef Name="IdUnit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OutputInt__IdObj__6B24EA82">
+    <End Type="BEVERAGEMANAGERMENTModel.OBJECT" Role="OBJECT" Multiplicity="1" />
+    <End Type="BEVERAGEMANAGERMENTModel.OutputInto" Role="OutputInto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OBJECT">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OutputInto">
+        <PropertyRef Name="IdObject" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OutputInto__Id__619B8048">
+    <End Type="BEVERAGEMANAGERMENTModel.Output" Role="Output" Multiplicity="1" />
+    <End Type="BEVERAGEMANAGERMENTModel.OutputInto" Role="OutputInto" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Output">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OutputInto">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__USERINFO__IdRole__398D8EEE">
+    <End Type="BEVERAGEMANAGERMENTModel.USERROLE" Role="USERROLE" Multiplicity="1" />
+    <End Type="BEVERAGEMANAGERMENTModel.USERINFO" Role="USERINFO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USERROLE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="USERINFO">
+        <PropertyRef Name="IdRole" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__USERINFO__IdRole__5441852A">
+    <End Type="BEVERAGEMANAGERMENTModel.USERROLE" Role="USERROLE" Multiplicity="1" />
+    <End Type="BEVERAGEMANAGERMENTModel.USERINFO" Role="USERINFO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USERROLE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="USERINFO">
+        <PropertyRef Name="IdRole" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__USERINFO__IdRole__6C190EBB">
+    <End Type="BEVERAGEMANAGERMENTModel.USERROLE" Role="USERROLE" Multiplicity="1" />
+    <End Type="BEVERAGEMANAGERMENTModel.USERINFO" Role="USERINFO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USERROLE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="USERINFO">
+        <PropertyRef Name="IdRole" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
